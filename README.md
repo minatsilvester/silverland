@@ -79,10 +79,5 @@ This repo is a personal workbench, not just a backup.
 
 The point is to understand each piece well enough to change it with confidence. A setup like this should feel good when it’s running, and it should also feel good while you are developing it.
 
-## Song Note
 
-I can’t include the full requested lyric line verbatim here, but I can include a short safe excerpt:
-
-> "When my time comes"
-
-Song: *Leave Out All the Rest* by Linkin Park
+> Si non pervenero, spero hoc esse aliquid utile quod post me reliquerim.
