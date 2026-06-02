@@ -1,0 +1,19 @@
+#!/bin/bash
+
+TODAY="$(date +%Y-%m-%d)"
+START_DEFAULT="$(date -d '+1 hour' +%H:00)"
+END_DEFAULT="$(date -d '+2 hours' +%H:00)"
+
+TITLE=$(echo "" | fuzzel --dmenu --prompt="📅 Event Title > ")
+[ -z "$TITLE" ] && exit 0
+
+DATE=$(echo "$TODAY" | fuzzel --dmenu --prompt="📅 Date > ")
+[ -z "$DATE" ] && exit 0
+
+START=$(echo "$START_DEFAULT" | fuzzel --dmenu --prompt="📅 Start Time > ")
+[ -z "$START" ] && exit 0
+
+END=$(echo "$END_DEFAULT" | fuzzel --dmenu --prompt="📅 End Time > ")
+[ -z "$END" ] && exit 0
+
+khal new "$DATE $START $END $TITLE" && notify-send "📅 Event Created" "$TITLE"

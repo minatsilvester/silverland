@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR="$HOME/Pictures/Screenshots"
+
+mkdir -p "$DIR"
+
+grim -g "$(slurp)" - | swappy -f - || exit 1
+pw-play "$HOME/.config/hypr/sounds/screenshot-shutter.wav"
+
+ACTION=$(notify-send -A open="Open Folder" "📷 Screenshot Saved" "Annotated screenshot saved")
+[ "$ACTION" = "open" ] && ${FILE_MANAGER:-dolphin} "$DIR" &

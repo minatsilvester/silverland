@@ -16,8 +16,4 @@ if ((${#packages[@]} > 0)); then
   sudo pacman -Syu --needed --noconfirm "${packages[@]}"
 fi
 
-if [[ -x "${DEPLOY_SCRIPT}" ]]; then
-  "${DEPLOY_SCRIPT}"
-else
-  bash "${DEPLOY_SCRIPT}"
-fi
+bash "${DEPLOY_SCRIPT}"

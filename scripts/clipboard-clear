@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wl-copy --clear
+cliphist wipe
+notify-send "Clipboard" "History cleared"

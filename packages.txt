@@ -33,6 +33,7 @@ slurp
 pavucontrol
 nm-connection-editor
 bluez-utils
+libnotify
 qt5-wayland
 qt6-wayland
 xdg-utils

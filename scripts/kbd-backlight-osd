@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ID=91192
+DEVICE="*asus::kbd_backlight"
+
+case "$1" in
+  up)
+    brightnessctl -d "$DEVICE" set +33%
+    ;;
+  down)
+    brightnessctl -d "$DEVICE" set 33%-
+    ;;
+esac
+
+LEVEL="$(brightnessctl -d "$DEVICE" -m | awk -F, '{gsub("%","",$4); print $4}')"
+
+notify-send -r "$ID" -t 900 -u low -a "Keyboard Backlight OSD" -h string:x-canonical-private-synchronous:kbd-backlight -h string:synchronous:kbd-backlight -h int:transient:1 -h int:value:"$LEVEL" "󰌌 Keyboard" "$LEVEL%"

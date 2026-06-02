@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ID=91191
+
+case "$1" in
+  up)
+    brightnessctl -e4 -n2 set +5%
+    ;;
+  down)
+    brightnessctl -e4 -n2 set 5%-
+    ;;
+esac
+
+BRIGHTNESS="$(brightnessctl -m | awk -F, '{gsub("%","",$4); print $4}')"
+
+notify-send -r "$ID" -t 900 -u low -a "Brightness OSD" -h string:x-canonical-private-synchronous:brightness -h string:synchronous:brightness -h int:transient:1 -h int:value:"$BRIGHTNESS" "󰃠 Brightness" "$BRIGHTNESS%"

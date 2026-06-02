@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CHOICE=$(printf "View Calendar\nAdd Event" | fuzzel --dmenu --prompt="📅 Calendar > ")
+
+case "$CHOICE" in
+  "View Calendar")
+    kitty -e khal interactive
+    ;;
+  "Add Event")
+    "$(dirname "$0")/calendar-add-event"
+    ;;
+esac
