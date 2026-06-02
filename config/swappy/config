@@ -1,0 +1,32 @@
+[Default]
+
+# Save location
+save_dir=$HOME/Pictures/Screenshots
+save_filename_format=%Y-%m-%d_%H-%M-%S.png
+
+# Show toolbar
+show_panel=true
+
+# Drawing
+line_size=4
+text_size=18
+text_font=JetBrainsMono Nerd Font
+
+# Arrows are what you'll use most
+paint_mode=arrow
+
+# Keep editor open until you decide
+early_exit=false
+
+# Shapes
+fill_shape=false
+
+# Don't save automatically
+auto_save=false
+
+# Motorsport orange
+custom_color=rgba(245,169,127,1)
+
+# Opaque screenshots
+transparent=false
+transparency=100

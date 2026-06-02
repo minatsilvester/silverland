@@ -1,0 +1,23 @@
+#!/bin/bash
+
+STATUS=$(playerctl status 2>/dev/null) || exit 0
+TITLE=$(playerctl metadata title 2>/dev/null)
+ARTIST=$(playerctl metadata artist 2>/dev/null)
+
+NOW_PLAYING="$TITLE"
+[ -n "$ARTIST" ] && NOW_PLAYING="$ARTIST - $TITLE"
+
+CHOICE=$(printf "󰒮 Previous\n󰐊 Play/Pause\n󰒭 Next" | \
+  fuzzel --dmenu --prompt="󰎈 $NOW_PLAYING > ")
+
+case "$CHOICE" in
+  "󰒮 Previous")
+    playerctl previous
+    ;;
+  "󰐊 Play/Pause")
+    playerctl play-pause
+    ;;
+  "󰒭 Next")
+    playerctl next
+    ;;
+esac

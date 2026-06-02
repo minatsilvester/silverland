@@ -1,0 +1,154 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(52, 59, 79, 0.94);
+  color: #e6ebf5;
+}
+
+#workspaces,
+#clock,
+#idle_inhibitor,
+#custom-notification,
+#wireplumber,
+#network,
+#power-profiles-daemon,
+#cpu,
+#battery,
+#custom-power {
+  background: #40485f;
+  color: #e6ebf5;
+  margin: 6px 3px;
+  padding: 4px 10px;
+  border-radius: 14px;
+}
+
+#custom-power {
+  color: #ed8796;
+  margin-right: 10px;
+  padding: 4px 12px;
+}
+
+#custom-power:hover {
+  color: #1f2330;
+  background: #ed8796;
+}
+
+#workspaces {
+  margin-left: 10px;
+  padding: 2px 6px;
+}
+
+#workspaces button {
+  color: #a8b0c0;
+  padding: 2px 9px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  color: #1f2330;
+  background: #f5a97f;
+}
+
+#workspaces button.urgent {
+  color: #1f2330;
+  background: #ed8796;
+}
+
+#clock {
+  color: #8bd5ca;
+}
+
+#custom-notification {
+  color: #f5a97f;
+}
+
+#cpu,
+#battery,
+#power-profiles-daemon {
+  color: #8bd5ca;
+}
+
+#network,
+#wireplumber {
+  color: #8aadf4;
+}
+
+#idle_inhibitor {
+  color: #eed49f;
+}
+
+#battery.warning {
+  color: #eed49f;
+}
+
+#battery.critical {
+  color: #ed8796;
+}
+
+#custom-power {
+  color: #ed8796;
+  margin-right: 10px;
+}
+
+menu {
+  background: #343b4f;
+  border: 2px solid rgba(245, 169, 127, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+menuitem {
+  background: transparent;
+  color: #e6ebf5;
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin: 2px 0;
+}
+
+menuitem:hover {
+  background: #40485f;
+  color: #f5a97f;
+}
+
+separator {
+  background: #4c5672;
+  min-height: 1px;
+  margin: 6px 0;
+}
+
+menuitem#shutdown {
+  color: #ed8796;
+}
+
+menuitem#reboot {
+  color: #8aadf4;
+}
+
+menuitem#lock {
+  color: #f5a97f;
+}
+
+menuitem#suspend,
+menuitem#hibernate {
+  color: #8bd5ca;
+}
+
+#custom-media {
+  background: #40485f;
+  color: #f5a97f;
+  margin: 6px 3px;
+  padding: 4px 10px;
+  border-radius: 14px;
+}
+
+#custom-media:hover {
+  color: #1f2330;
+  background: #f5a97f;
+}

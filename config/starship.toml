@@ -1,0 +1,77 @@
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$fill\
+$time\
+$line_break\
+$character
+"""
+
+palette = "midnight_motorsport"
+
+[palettes.midnight_motorsport]
+bg = "#4c27b4"
+surface = "#3a4258"
+text = "#e6ebf5"
+muted = "#a8b0c0"
+blue = "#8aadf4"
+pink = "#f720e9"
+orange = "#f5a97f"
+green = "#8bd5ca"
+red = "#ed8796"
+yellow = "#eed49f"
+directory = "#edf2ff"
+
+[os]
+disabled = false
+style = "blue"
+format = "[$symbol]($style) "
+
+[os.symbols]
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "bold blue"
+format = "[$user@]($style) "
+
+[directory]
+style = "bold directory"
+truncation_length = 2
+truncate_to_repo = false
+home_symbol = "~"
+read_only = " "
+read_only_style = "red"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+style = "bold orange"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold red"
+format = "([$all_status$ahead_behind]($style) )"
+
+[cmd_duration]
+min_time = 1000
+style = "muted"
+format = "[$duration]($style) "
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bold green"
+format = "[$time]($style)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold yellow)"

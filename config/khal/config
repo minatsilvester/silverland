@@ -1,0 +1,16 @@
+[calendars]
+
+[[personal]]
+path = ~/.local/share/calendars/personal/
+color = dark green
+
+[default]
+default_calendar = personal
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = "%A, %d %B %Y"
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = "%A, %d %B %Y %H:%M"
+firstweekday = 0
